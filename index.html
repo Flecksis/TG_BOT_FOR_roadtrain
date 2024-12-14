@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow-y: auto; /* Добавлено для прокрутки страницы */
+        }
+
+        .image-container {
+            position: relative; /* Изменено на relative для корректного позиционирования */
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .icon-button {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 5vw;
+            height: 5vw;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-button:active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .card {
+            width: 30vw;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 3vw;
+            display: none;
+            transform: translate(-50%, -50%);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 3.5vw;
+        }
+
+        .card p {
+            margin: 0;
+            color: #555;
+            font-size: 2.5vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://i.imgur.com/Eu8EfXC.png" alt="Background">
+
+        <!-- Кнопки -->
+        <div class="button-container" style="top: 30%; left: 32.5%;">
+            <button class="icon-button" onclick="toggleCard(1)"></button>
+            <div class="card" id="infoCard1" style="margin-left: 7%;margin-top: -81%;">
+                <a href="https://ru.wikipedia.org/wiki/Константиновская_батарея_(Севастополь)">
+                    <img src="https://i.imgur.com/adl4ru2.png" alt="Placeholder Image">
+                </a>
+                <h3>Константиновская батарея</h3>
+                <p>Построена в 1840 году как одно из фортификационных сооружений на Северной стороне Севастополя.</p>
+            </div>
+        </div>
+
+        <div class="button-container" style="top: 58%;left: 83.4%;">
+            <button class="icon-button" onclick="toggleCard(2)"></button>
+            <div class="card" id="infoCard2" style="margin-top: -100%;margin-left: -12%;">
+                <a href="https://ru.wikipedia.org/wiki/Малахов_курган">
+                    <img src="https://i.imgur.com/RX5VNfz.png" alt="Placeholder Image">
+                </a>
+                <h3>Мемориальный комплекс Малахов курган</h3>
+                <p>Парк культуры и отдыха, расположенный на высоте 97 метров над уровнем моря, где проходили тяжелые бои во время первой и второй обороны Севастополя.</p>
+            </div>
+        </div>
+
+        <div class="button-container" style="top: 50%; left: 4.55%;">
+            <button class="icon-button" onclick="toggleCard(3)"></button>
+            <div class="card" id="infoCard3" style="margin-left: 68%; margin-top: -7%;">
+                <a href="https://ru.wikipedia.org/wiki/Херсонес_Таврический">
+                    <img src="https://i.imgur.com/oh9SgxT.png" alt="Placeholder Image">
+                </a>
+                <h3>Херсонес Таврический</h3>
+                <p>Древний город, основанный в 424-421 годах до нашей эры греками-дорийцами.</p>
+            </div>
+        </div>
+
+        <div class="button-container" style="top: 68.5%;left: 48.5%;">
+            <button class="icon-button" onclick="toggleCard(4)"></button>
+            <div class="card" id="infoCard4" style="margin-top: -86%;margin-left: -54%;">
+                <a href ="https://ru.wikipedia.org/wiki/Оборона_Севастополя_(панорама)">
+                    <img src="https://i.imgur.com/PTml1yk.png" >
+                </a>
+                <h3>Панорама Оборона Севастополя 1854-1855 гг</h3>
+                <p>Музей-панорама, посвящённый первой обороне Севастополя. Впервые отркыта 14 (27) мая 1905 года</p>
+            </div>
+        </div>
+
+        <div class="button-container" style="top: 39%; left: 50%;">
+            <button class="icon-button" onclick="toggleCard(5)"></button>
+            <div class="card" id="infoCard5" style="margin-top: -6%;margin-left: 68%;">
+                <a href = "https://ru.wikipedia.org/wiki/Памятник_затопленным_кораблям">
+                    <img src="https://i.imgur.com/Mpwl43v.png" alt="Placeholder Image">
+                </a>
+                <h3>Памятник Затопленным кораблям</h3>
+                <p>Был установлен в 1905 году к 50-летию Первой обороны Севастополя.</p>
+            </div>
+        </div>
+    </div>
+     <footer style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 12vw;
+        max-height: 20vh;
+        background-color: #fff;
+        padding: 10px 20px;
+        padding-left:0px;
+        text-align: center;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;">
+        <p style="margin: 0; font-size: 4vw; color: #333;">Нажимайте на картинки достопримечательностей,</p>
+         <p style="margin: 0; font-size: 4vw; color: #333;">чтобы узнать о них поподробнее!</p>
+    </footer>
+
+    <script>
+        let activeCard = null;
+
+        function toggleCard(cardId) {
+            const card = document.getElementById('infoCard' + cardId);
+
+            // Закрываем предыдущую активную карточку, если она есть
+            if (activeCard && activeCard !== card) {
+                activeCard.style.display = 'none';
+            }
+
+            // Переключаем состояние текущей карточки
+            if (card.style.display === 'block') {
+                card.style.display = 'none';
+                activeCard = null;
+            } else {
+                card.style.display = 'block';
+                activeCard = card;
+            }
+        }
+    </script>
+</body>
+</html>
