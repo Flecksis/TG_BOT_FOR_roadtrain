@@ -11,7 +11,7 @@ from aiogram.enums.parse_mode import ParseMode
 import json
 import os
 
-API_TOKEN = "7783450387:AAGaa4u96EAcQe_8cv_1Tgf0cZqbQhkZ-RQ"
+API_TOKEN = "Ваш токен"
 
 # Инициализация бота
 bot = Bot(token=API_TOKEN)
