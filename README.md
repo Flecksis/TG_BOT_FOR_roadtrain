@@ -1,2 +1,2 @@
-# TG_BOT_FOR_ru_roadtrain
+# TG_BOT_FOR_roadtrain
 Телеграм бот для авто поезда 'Россия - моя история'
