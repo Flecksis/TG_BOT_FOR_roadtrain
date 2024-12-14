@@ -35,17 +35,14 @@
 
 1. **Клонирование репозитория:**
    ```bash
-   git clone <URL_вашего_репозитория>
-   cd <название_проекта>
+   git clone https://github.com/Flecksis/TG_BOT_FOR_roadtrain.git
+   cd TG_BOT_FOR_roadtrain
    ```
 
 2. **Установка зависимостей:**
    ```bash
-   pip install -U g4f[all]
-   pip install aiogram
+   pip install -r requirements.txt
    ```
-
-
 
 3. **Настройка переменных:**
    В коде замените `API_TOKEN` на токен вашего бота, полученный через @BotFather:
